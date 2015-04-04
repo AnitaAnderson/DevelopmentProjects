@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.4.0"
+  },
+  "applications": {
+    "CrepeInventory": {
+      "applicationId": "iZHL0HLvk1g3lut3KdzAPXXHLU5jW2mexmlbvguU",
+      "masterKey": "T5BzAWPhOla8RvaSx0POryZANhNXlxKnjFyklsdo"
+    },
+    "_default": {
+      "link": "CrepeInventory"
+    }
+  }
+}

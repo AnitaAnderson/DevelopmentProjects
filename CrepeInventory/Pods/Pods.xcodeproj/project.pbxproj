@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08CEFB9232220F3A325FECD7 /* Bolts.h in Headers */ = {isa = PBXBuildFile; fileRef = C3C7EE96433B0A7D1689E02E /* Bolts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14294C3690A0ACBB03949518 /* BFMeasurementEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDD7C3C1DDFF8552E24049 /* BFMeasurementEvent.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1498E156EA11E09C9B257BDB /* BFTask.h in Headers */ = {isa = PBXBuildFile; fileRef = C9361EA59A3F8A7C6A8EC338 /* BFTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A0907601A5DCC9C887A816F /* BoltsVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F4520F9F45C7B39FFD561E5 /* BoltsVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		238EB60F846E65B206864CEF /* BFAppLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 65C28135CE52D186D77CA8E0 /* BFAppLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29339C366BD7FFF56844CEF0 /* BFExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = 175B2D8FA5AE7779FD6A853A /* BFExecutor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32003832E90A751B193431A3 /* BFAppLinkReturnToRefererController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CBF0C82282732FB257F2574 /* BFAppLinkReturnToRefererController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35509E37AE6A7A6864967FD1 /* Pods-CrepeInventoryApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98235F3EC32C74BC632F208A /* Pods-CrepeInventoryApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		378068FD1F92D1D55DAD51DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91756B72E7A5FB2E0FAE9490 /* Foundation.framework */; };
+		45264168E21AAD56A826B25F /* BFTaskCompletionSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FD366AF177C1477C4EACB18D /* BFTaskCompletionSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D73A66EFBF2385DC875A999 /* BFAppLinkTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 811579FD7996BA6FA202D70A /* BFAppLinkTarget.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		548A89634A076CB0272AF3B3 /* BFAppLinkReturnToRefererView_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C6931E13E6860D140AF7F0E4 /* BFAppLinkReturnToRefererView_Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		553EB9F5CF4BBB317097F0A7 /* BFExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BA312D4392826D09350BB4 /* BFExecutor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		555D6DD6FD346F0622FD36D0 /* BFAppLinkNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 071D8DE2B6373BFAF069DF18 /* BFAppLinkNavigation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5F3380B9496B523E250918D6 /* BFWebViewAppLinkResolver.h in Headers */ = {isa = PBXBuildFile; fileRef = A4D4F544C618D9E94621769D /* BFWebViewAppLinkResolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		683E41CF7B7FCC1B4CE63405 /* BFMeasurementEvent_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 39D43F108B554CA898FB2B11 /* BFMeasurementEvent_Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73816417570CD80A83075F77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91756B72E7A5FB2E0FAE9490 /* Foundation.framework */; };
+		7E6729FFC937A82B4B04AA23 /* Bolts.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C7169B6832C8357EA2B780 /* Bolts.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		82D2378051B4AE37FEFE6510 /* BFAppLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0EC891A6B187E52D18F3E5 /* BFAppLink.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		97F30F729D583B2911DE5B81 /* BFAppLinkResolving.h in Headers */ = {isa = PBXBuildFile; fileRef = 404502BB3F41673292EA6093 /* BFAppLinkResolving.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F60AC6BA1F824C2DF91E1C1 /* BFURL_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AC515DD138BB9C195056603 /* BFURL_Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2AA5FF229EF906A9A082927 /* BFURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FB67D9746D385822D20A185 /* BFURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C438743A36FEA2B76D212E3F /* BFTaskCompletionSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA8F5EF9AE8A0BCAC660279 /* BFTaskCompletionSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C8440CF46C7C6CD962836842 /* BFAppLinkReturnToRefererView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D3934A2140F21AC5F02E16 /* BFAppLinkReturnToRefererView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D162981D8B689870A46E6D61 /* BFAppLinkNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 32580230A06927E8FEDB513D /* BFAppLinkNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D35B2D20958401D27BB4A1FE /* BFMeasurementEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCA74E41111F612BCA75FFE /* BFMeasurementEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4CDA751BA3C984B9C5052B3 /* BFAppLinkTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = 7187F57AAC2289DA2134CF72 /* BFAppLinkTarget.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAA1A1FB73342D149C74860F /* BFAppLinkReturnToRefererController.m in Sources */ = {isa = PBXBuildFile; fileRef = A186EF19AC3293E690DD9FE9 /* BFAppLinkReturnToRefererController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DF560A932E835EAE90D6EB9C /* BFAppLink_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 25BAC37B7941004D71C79B99 /* BFAppLink_Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E029D199C768B3D33A4F2B43 /* BFTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E30F184CB0B46173D28FA /* BFTask.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E30AB76EA28E36656BE4A4B4 /* BFWebViewAppLinkResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F9C70F7A1EE2A9542BF163 /* BFWebViewAppLinkResolver.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EF90FAE5678DBEBF17D387A0 /* Pods-CrepeInventoryApp-Bolts-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA18EF27E24D1CAC93650AC3 /* Pods-CrepeInventoryApp-Bolts-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F05F7BBE23994B8AB98EF6FE /* BFAppLinkReturnToRefererView.h in Headers */ = {isa = PBXBuildFile; fileRef = 21398D212F45940BA83D7824 /* BFAppLinkReturnToRefererView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2EF5448EC599F4B7216C483 /* BFURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 194CAD786461DAA07A818805 /* BFURL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F542C591BF1813FC57E3FBBE /* Pods-CrepeInventoryApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E42E9908D11D9ECDE27AE50 /* Pods-CrepeInventoryApp-dummy.m */; };
+		FDDC38EF04A051FF40B2871B /* Pods-CrepeInventoryApp-Bolts-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F612C5AAB867306863116D6A /* Pods-CrepeInventoryApp-Bolts-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95EF881589FFBE96D9BB6689 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90E82BB378397E22D36A55B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22437B4E7A5C59561362EF54;
+			remoteInfo = "Pods-CrepeInventoryApp-Bolts";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		071D8DE2B6373BFAF069DF18 /* BFAppLinkNavigation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFAppLinkNavigation.m; path = Bolts/iOS/BFAppLinkNavigation.m; sourceTree = "<group>"; };
+		0759103B99C792D93A571C77 /* Pods-CrepeInventoryApp-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CrepeInventoryApp-environment.h"; sourceTree = "<group>"; };
+		10C7169B6832C8357EA2B780 /* Bolts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Bolts.m; path = Bolts/Common/Bolts.m; sourceTree = "<group>"; };
+		115339A7A624C45B665E035E /* Pods-CrepeInventoryApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CrepeInventoryApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		11BA312D4392826D09350BB4 /* BFExecutor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFExecutor.m; path = Bolts/Common/BFExecutor.m; sourceTree = "<group>"; };
+		175B2D8FA5AE7779FD6A853A /* BFExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFExecutor.h; path = Bolts/Common/BFExecutor.h; sourceTree = "<group>"; };
+		187E30F184CB0B46173D28FA /* BFTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFTask.m; path = Bolts/Common/BFTask.m; sourceTree = "<group>"; };
+		194CAD786461DAA07A818805 /* BFURL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFURL.m; path = Bolts/iOS/BFURL.m; sourceTree = "<group>"; };
+		1E42E9908D11D9ECDE27AE50 /* Pods-CrepeInventoryApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CrepeInventoryApp-dummy.m"; sourceTree = "<group>"; };
+		21398D212F45940BA83D7824 /* BFAppLinkReturnToRefererView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFAppLinkReturnToRefererView.h; path = Bolts/iOS/BFAppLinkReturnToRefererView.h; sourceTree = "<group>"; };
+		25BAC37B7941004D71C79B99 /* BFAppLink_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFAppLink_Internal.h; path = Bolts/iOS/BFAppLink_Internal.h; sourceTree = "<group>"; };
+		2BCA74E41111F612BCA75FFE /* BFMeasurementEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFMeasurementEvent.h; path = Bolts/iOS/BFMeasurementEvent.h; sourceTree = "<group>"; };
+		32580230A06927E8FEDB513D /* BFAppLinkNavigation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFAppLinkNavigation.h; path = Bolts/iOS/BFAppLinkNavigation.h; sourceTree = "<group>"; };
+		39D43F108B554CA898FB2B11 /* BFMeasurementEvent_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFMeasurementEvent_Internal.h; path = Bolts/iOS/BFMeasurementEvent_Internal.h; sourceTree = "<group>"; };
+		404502BB3F41673292EA6093 /* BFAppLinkResolving.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFAppLinkResolving.h; path = Bolts/iOS/BFAppLinkResolving.h; sourceTree = "<group>"; };
+		45B649E9DE7813D70D8B2DF7 /* Pods_CrepeInventoryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrepeInventoryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AA80563224D4E09C48B1D6D /* Pods-CrepeInventoryApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CrepeInventoryApp-resources.sh"; sourceTree = "<group>"; };
+		4B464A4ACD43F35D62A5C15A /* Pods-CrepeInventoryApp-Bolts-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CrepeInventoryApp-Bolts-Private.xcconfig"; sourceTree = "<group>"; };
+		4C0EC891A6B187E52D18F3E5 /* BFAppLink.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFAppLink.m; path = Bolts/iOS/BFAppLink.m; sourceTree = "<group>"; };
+		50A886A10BEA557A54F1A4A4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54D3934A2140F21AC5F02E16 /* BFAppLinkReturnToRefererView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFAppLinkReturnToRefererView.m; path = Bolts/iOS/BFAppLinkReturnToRefererView.m; sourceTree = "<group>"; };
+		65C28135CE52D186D77CA8E0 /* BFAppLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFAppLink.h; path = Bolts/iOS/BFAppLink.h; sourceTree = "<group>"; };
+		6BC63BC6F070C2139175C180 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6F4520F9F45C7B39FFD561E5 /* BoltsVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BoltsVersion.h; path = Bolts/Common/BoltsVersion.h; sourceTree = "<group>"; };
+		7187F57AAC2289DA2134CF72 /* BFAppLinkTarget.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFAppLinkTarget.h; path = Bolts/iOS/BFAppLinkTarget.h; sourceTree = "<group>"; };
+		7AC515DD138BB9C195056603 /* BFURL_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFURL_Internal.h; path = Bolts/iOS/BFURL_Internal.h; sourceTree = "<group>"; };
+		7CBF0C82282732FB257F2574 /* BFAppLinkReturnToRefererController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFAppLinkReturnToRefererController.h; path = Bolts/iOS/BFAppLinkReturnToRefererController.h; sourceTree = "<group>"; };
+		811579FD7996BA6FA202D70A /* BFAppLinkTarget.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFAppLinkTarget.m; path = Bolts/iOS/BFAppLinkTarget.m; sourceTree = "<group>"; };
+		8FB67D9746D385822D20A185 /* BFURL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFURL.h; path = Bolts/iOS/BFURL.h; sourceTree = "<group>"; };
+		91756B72E7A5FB2E0FAE9490 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		98235F3EC32C74BC632F208A /* Pods-CrepeInventoryApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CrepeInventoryApp-umbrella.h"; sourceTree = "<group>"; };
+		98E39D67366C73C3F3D09C7E /* Pods-CrepeInventoryApp-Bolts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CrepeInventoryApp-Bolts.modulemap"; sourceTree = "<group>"; };
+		9A4A99FFA035B18533EBE540 /* Pods-CrepeInventoryApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CrepeInventoryApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		9DCDD7C3C1DDFF8552E24049 /* BFMeasurementEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFMeasurementEvent.m; path = Bolts/iOS/BFMeasurementEvent.m; sourceTree = "<group>"; };
+		A186EF19AC3293E690DD9FE9 /* BFAppLinkReturnToRefererController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFAppLinkReturnToRefererController.m; path = Bolts/iOS/BFAppLinkReturnToRefererController.m; sourceTree = "<group>"; };
+		A4D4F544C618D9E94621769D /* BFWebViewAppLinkResolver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFWebViewAppLinkResolver.h; path = Bolts/iOS/BFWebViewAppLinkResolver.h; sourceTree = "<group>"; };
+		A5128F35056CE730F12A06EA /* Pods-CrepeInventoryApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CrepeInventoryApp.modulemap"; sourceTree = "<group>"; };
+		AA00488C0C72F6F2830E6D02 /* Pods-CrepeInventoryApp-Bolts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CrepeInventoryApp-Bolts-prefix.pch"; sourceTree = "<group>"; };
+		C3C7EE96433B0A7D1689E02E /* Bolts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Bolts.h; path = Bolts/Common/Bolts.h; sourceTree = "<group>"; };
+		C6931E13E6860D140AF7F0E4 /* BFAppLinkReturnToRefererView_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFAppLinkReturnToRefererView_Internal.h; path = Bolts/iOS/BFAppLinkReturnToRefererView_Internal.h; sourceTree = "<group>"; };
+		C9361EA59A3F8A7C6A8EC338 /* BFTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFTask.h; path = Bolts/Common/BFTask.h; sourceTree = "<group>"; };
+		DFDD2A0CCF2D4B1E5A56F748 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E083DEA9420F6020D57803BC /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E17FE0FC10BEC070ED88002C /* Pods-CrepeInventoryApp-Bolts.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CrepeInventoryApp-Bolts.xcconfig"; sourceTree = "<group>"; };
+		E2F9C70F7A1EE2A9542BF163 /* BFWebViewAppLinkResolver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFWebViewAppLinkResolver.m; path = Bolts/iOS/BFWebViewAppLinkResolver.m; sourceTree = "<group>"; };
+		E6141907B02877163E5F068E /* Pods-CrepeInventoryApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CrepeInventoryApp-frameworks.sh"; sourceTree = "<group>"; };
+		EA18EF27E24D1CAC93650AC3 /* Pods-CrepeInventoryApp-Bolts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CrepeInventoryApp-Bolts-umbrella.h"; sourceTree = "<group>"; };
+		F53673EE440C516B634A8F57 /* Pods-CrepeInventoryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CrepeInventoryApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F5DFCBAD77F9455C254FAD6B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		F612C5AAB867306863116D6A /* Pods-CrepeInventoryApp-Bolts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CrepeInventoryApp-Bolts-dummy.m"; sourceTree = "<group>"; };
+		FBA8F5EF9AE8A0BCAC660279 /* BFTaskCompletionSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFTaskCompletionSource.m; path = Bolts/Common/BFTaskCompletionSource.m; sourceTree = "<group>"; };
+		FCD53D16DD0B0987D6543294 /* Pods-CrepeInventoryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CrepeInventoryApp.release.xcconfig"; sourceTree = "<group>"; };
+		FD366AF177C1477C4EACB18D /* BFTaskCompletionSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFTaskCompletionSource.h; path = Bolts/Common/BFTaskCompletionSource.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6CAE8F09C3465E0CFA0C1FCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				378068FD1F92D1D55DAD51DD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3244C7CE605F33B18A325B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73816417570CD80A83075F77 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38D9884DF01D88F585658233 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8C5D6BF5B5FA12B837D6382 /* Pods-CrepeInventoryApp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4772AAA2AAC22540857FA76E /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				D9C30DECC8A0145FD4998224 /* Frameworks */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
+		B619EEE0EF129AC9F2C4B713 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C987BDAB2D1AF88136BB34E9 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C987BDAB2D1AF88136BB34E9 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				91756B72E7A5FB2E0FAE9490 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C9CF6BD213D61ECAA5FA3E4C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBD64CFFADEDA0D38E9A2769 /* Bolts */,
+				4772AAA2AAC22540857FA76E /* Parse */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D2F0181A03803F1BA92396EB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				50A886A10BEA557A54F1A4A4 /* Info.plist */,
+				98E39D67366C73C3F3D09C7E /* Pods-CrepeInventoryApp-Bolts.modulemap */,
+				E17FE0FC10BEC070ED88002C /* Pods-CrepeInventoryApp-Bolts.xcconfig */,
+				4B464A4ACD43F35D62A5C15A /* Pods-CrepeInventoryApp-Bolts-Private.xcconfig */,
+				F612C5AAB867306863116D6A /* Pods-CrepeInventoryApp-Bolts-dummy.m */,
+				AA00488C0C72F6F2830E6D02 /* Pods-CrepeInventoryApp-Bolts-prefix.pch */,
+				EA18EF27E24D1CAC93650AC3 /* Pods-CrepeInventoryApp-Bolts-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-CrepeInventoryApp-Bolts";
+			sourceTree = "<group>";
+		};
+		D8C5D6BF5B5FA12B837D6382 /* Pods-CrepeInventoryApp */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD2A0CCF2D4B1E5A56F748 /* Info.plist */,
+				A5128F35056CE730F12A06EA /* Pods-CrepeInventoryApp.modulemap */,
+				115339A7A624C45B665E035E /* Pods-CrepeInventoryApp-acknowledgements.markdown */,
+				9A4A99FFA035B18533EBE540 /* Pods-CrepeInventoryApp-acknowledgements.plist */,
+				1E42E9908D11D9ECDE27AE50 /* Pods-CrepeInventoryApp-dummy.m */,
+				0759103B99C792D93A571C77 /* Pods-CrepeInventoryApp-environment.h */,
+				E6141907B02877163E5F068E /* Pods-CrepeInventoryApp-frameworks.sh */,
+				4AA80563224D4E09C48B1D6D /* Pods-CrepeInventoryApp-resources.sh */,
+				98235F3EC32C74BC632F208A /* Pods-CrepeInventoryApp-umbrella.h */,
+				F53673EE440C516B634A8F57 /* Pods-CrepeInventoryApp.debug.xcconfig */,
+				FCD53D16DD0B0987D6543294 /* Pods-CrepeInventoryApp.release.xcconfig */,
+			);
+			name = "Pods-CrepeInventoryApp";
+			path = "Target Support Files/Pods-CrepeInventoryApp";
+			sourceTree = "<group>";
+		};
+		D991100908E8199EB10E11ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E083DEA9420F6020D57803BC /* Bolts.framework */,
+				45B649E9DE7813D70D8B2DF7 /* Pods_CrepeInventoryApp.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9C30DECC8A0145FD4998224 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5DFCBAD77F9455C254FAD6B /* Parse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBD64CFFADEDA0D38E9A2769 /* Bolts */ = {
+			isa = PBXGroup;
+			children = (
+				65C28135CE52D186D77CA8E0 /* BFAppLink.h */,
+				4C0EC891A6B187E52D18F3E5 /* BFAppLink.m */,
+				32580230A06927E8FEDB513D /* BFAppLinkNavigation.h */,
+				071D8DE2B6373BFAF069DF18 /* BFAppLinkNavigation.m */,
+				404502BB3F41673292EA6093 /* BFAppLinkResolving.h */,
+				7CBF0C82282732FB257F2574 /* BFAppLinkReturnToRefererController.h */,
+				A186EF19AC3293E690DD9FE9 /* BFAppLinkReturnToRefererController.m */,
+				21398D212F45940BA83D7824 /* BFAppLinkReturnToRefererView.h */,
+				54D3934A2140F21AC5F02E16 /* BFAppLinkReturnToRefererView.m */,
+				C6931E13E6860D140AF7F0E4 /* BFAppLinkReturnToRefererView_Internal.h */,
+				7187F57AAC2289DA2134CF72 /* BFAppLinkTarget.h */,
+				811579FD7996BA6FA202D70A /* BFAppLinkTarget.m */,
+				25BAC37B7941004D71C79B99 /* BFAppLink_Internal.h */,
+				175B2D8FA5AE7779FD6A853A /* BFExecutor.h */,
+				11BA312D4392826D09350BB4 /* BFExecutor.m */,
+				2BCA74E41111F612BCA75FFE /* BFMeasurementEvent.h */,
+				9DCDD7C3C1DDFF8552E24049 /* BFMeasurementEvent.m */,
+				39D43F108B554CA898FB2B11 /* BFMeasurementEvent_Internal.h */,
+				C9361EA59A3F8A7C6A8EC338 /* BFTask.h */,
+				187E30F184CB0B46173D28FA /* BFTask.m */,
+				FD366AF177C1477C4EACB18D /* BFTaskCompletionSource.h */,
+				FBA8F5EF9AE8A0BCAC660279 /* BFTaskCompletionSource.m */,
+				8FB67D9746D385822D20A185 /* BFURL.h */,
+				194CAD786461DAA07A818805 /* BFURL.m */,
+				7AC515DD138BB9C195056603 /* BFURL_Internal.h */,
+				A4D4F544C618D9E94621769D /* BFWebViewAppLinkResolver.h */,
+				E2F9C70F7A1EE2A9542BF163 /* BFWebViewAppLinkResolver.m */,
+				C3C7EE96433B0A7D1689E02E /* Bolts.h */,
+				10C7169B6832C8357EA2B780 /* Bolts.m */,
+				6F4520F9F45C7B39FFD561E5 /* BoltsVersion.h */,
+				D2F0181A03803F1BA92396EB /* Support Files */,
+			);
+			path = Bolts;
+			sourceTree = "<group>";
+		};
+		EE0A36A8B76850A699D0A260 = {
+			isa = PBXGroup;
+			children = (
+				6BC63BC6F070C2139175C180 /* Podfile */,
+				B619EEE0EF129AC9F2C4B713 /* Frameworks */,
+				C9CF6BD213D61ECAA5FA3E4C /* Pods */,
+				D991100908E8199EB10E11ED /* Products */,
+				38D9884DF01D88F585658233 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CCB8449E471FE8114B72CF43 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238EB60F846E65B206864CEF /* BFAppLink.h in Headers */,
+				D162981D8B689870A46E6D61 /* BFAppLinkNavigation.h in Headers */,
+				97F30F729D583B2911DE5B81 /* BFAppLinkResolving.h in Headers */,
+				32003832E90A751B193431A3 /* BFAppLinkReturnToRefererController.h in Headers */,
+				F05F7BBE23994B8AB98EF6FE /* BFAppLinkReturnToRefererView.h in Headers */,
+				548A89634A076CB0272AF3B3 /* BFAppLinkReturnToRefererView_Internal.h in Headers */,
+				D4CDA751BA3C984B9C5052B3 /* BFAppLinkTarget.h in Headers */,
+				DF560A932E835EAE90D6EB9C /* BFAppLink_Internal.h in Headers */,
+				29339C366BD7FFF56844CEF0 /* BFExecutor.h in Headers */,
+				D35B2D20958401D27BB4A1FE /* BFMeasurementEvent.h in Headers */,
+				683E41CF7B7FCC1B4CE63405 /* BFMeasurementEvent_Internal.h in Headers */,
+				1498E156EA11E09C9B257BDB /* BFTask.h in Headers */,
+				45264168E21AAD56A826B25F /* BFTaskCompletionSource.h in Headers */,
+				A2AA5FF229EF906A9A082927 /* BFURL.h in Headers */,
+				9F60AC6BA1F824C2DF91E1C1 /* BFURL_Internal.h in Headers */,
+				5F3380B9496B523E250918D6 /* BFWebViewAppLinkResolver.h in Headers */,
+				08CEFB9232220F3A325FECD7 /* Bolts.h in Headers */,
+				1A0907601A5DCC9C887A816F /* BoltsVersion.h in Headers */,
+				EF90FAE5678DBEBF17D387A0 /* Pods-CrepeInventoryApp-Bolts-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D009E93AD7695E3E094266 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35509E37AE6A7A6864967FD1 /* Pods-CrepeInventoryApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		161ED9E831402E47E949480A /* Pods-CrepeInventoryApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 765AC0F6C25F1C1CE63ACF0F /* Build configuration list for PBXNativeTarget "Pods-CrepeInventoryApp" */;
+			buildPhases = (
+				B45F5129016E000B751C4860 /* Sources */,
+				6CAE8F09C3465E0CFA0C1FCB /* Frameworks */,
+				D2D009E93AD7695E3E094266 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F620FBD9AF3B562B040DD51A /* PBXTargetDependency */,
+			);
+			name = "Pods-CrepeInventoryApp";
+			productName = "Pods-CrepeInventoryApp";
+			productReference = 45B649E9DE7813D70D8B2DF7 /* Pods_CrepeInventoryApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		22437B4E7A5C59561362EF54 /* Pods-CrepeInventoryApp-Bolts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D14A4B1DD0FF75381B0CAD5C /* Build configuration list for PBXNativeTarget "Pods-CrepeInventoryApp-Bolts" */;
+			buildPhases = (
+				207CF80DCEFECADA29076388 /* Sources */,
+				A3244C7CE605F33B18A325B6 /* Frameworks */,
+				CCB8449E471FE8114B72CF43 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-CrepeInventoryApp-Bolts";
+			productName = "Pods-CrepeInventoryApp-Bolts";
+			productReference = E083DEA9420F6020D57803BC /* Bolts.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90E82BB378397E22D36A55B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 2C332D4D3D603EBE9656D581 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EE0A36A8B76850A699D0A260;
+			productRefGroup = D991100908E8199EB10E11ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				161ED9E831402E47E949480A /* Pods-CrepeInventoryApp */,
+				22437B4E7A5C59561362EF54 /* Pods-CrepeInventoryApp-Bolts */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		207CF80DCEFECADA29076388 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82D2378051B4AE37FEFE6510 /* BFAppLink.m in Sources */,
+				555D6DD6FD346F0622FD36D0 /* BFAppLinkNavigation.m in Sources */,
+				DAA1A1FB73342D149C74860F /* BFAppLinkReturnToRefererController.m in Sources */,
+				C8440CF46C7C6CD962836842 /* BFAppLinkReturnToRefererView.m in Sources */,
+				4D73A66EFBF2385DC875A999 /* BFAppLinkTarget.m in Sources */,
+				553EB9F5CF4BBB317097F0A7 /* BFExecutor.m in Sources */,
+				14294C3690A0ACBB03949518 /* BFMeasurementEvent.m in Sources */,
+				E029D199C768B3D33A4F2B43 /* BFTask.m in Sources */,
+				C438743A36FEA2B76D212E3F /* BFTaskCompletionSource.m in Sources */,
+				F2EF5448EC599F4B7216C483 /* BFURL.m in Sources */,
+				E30AB76EA28E36656BE4A4B4 /* BFWebViewAppLinkResolver.m in Sources */,
+				7E6729FFC937A82B4B04AA23 /* Bolts.m in Sources */,
+				FDDC38EF04A051FF40B2871B /* Pods-CrepeInventoryApp-Bolts-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B45F5129016E000B751C4860 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F542C591BF1813FC57E3FBBE /* Pods-CrepeInventoryApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F620FBD9AF3B562B040DD51A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-CrepeInventoryApp-Bolts";
+			target = 22437B4E7A5C59561362EF54 /* Pods-CrepeInventoryApp-Bolts */;
+			targetProxy = 95EF881589FFBE96D9BB6689 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		39C2B4F77B93F2C846A684A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		514BA293CA3FF7164E0ED782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B464A4ACD43F35D62A5C15A /* Pods-CrepeInventoryApp-Bolts-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-CrepeInventoryApp-Bolts/Pods-CrepeInventoryApp-Bolts-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-CrepeInventoryApp-Bolts/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-CrepeInventoryApp-Bolts/Pods-CrepeInventoryApp-Bolts.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Bolts;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		54A3CEB1AE616BAF8DBB2323 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCD53D16DD0B0987D6543294 /* Pods-CrepeInventoryApp.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CrepeInventoryApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-CrepeInventoryApp/Pods-CrepeInventoryApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_CrepeInventoryApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B84A90C22C31E97A75846696 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B464A4ACD43F35D62A5C15A /* Pods-CrepeInventoryApp-Bolts-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-CrepeInventoryApp-Bolts/Pods-CrepeInventoryApp-Bolts-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-CrepeInventoryApp-Bolts/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-CrepeInventoryApp-Bolts/Pods-CrepeInventoryApp-Bolts.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Bolts;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D7C548758DF2819D36FA3798 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA2CDC0A84E964FA03680B30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F53673EE440C516B634A8F57 /* Pods-CrepeInventoryApp.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CrepeInventoryApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-CrepeInventoryApp/Pods-CrepeInventoryApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_CrepeInventoryApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C332D4D3D603EBE9656D581 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39C2B4F77B93F2C846A684A2 /* Debug */,
+				D7C548758DF2819D36FA3798 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		765AC0F6C25F1C1CE63ACF0F /* Build configuration list for PBXNativeTarget "Pods-CrepeInventoryApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA2CDC0A84E964FA03680B30 /* Debug */,
+				54A3CEB1AE616BAF8DBB2323 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D14A4B1DD0FF75381B0CAD5C /* Build configuration list for PBXNativeTarget "Pods-CrepeInventoryApp-Bolts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				514BA293CA3FF7164E0ED782 /* Debug */,
+				B84A90C22C31E97A75846696 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90E82BB378397E22D36A55B8 /* Project object */;
+}

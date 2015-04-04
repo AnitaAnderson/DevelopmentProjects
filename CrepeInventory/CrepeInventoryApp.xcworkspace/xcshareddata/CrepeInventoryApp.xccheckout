@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>03A79BBA-1005-4B87-B771-9772B83E57AB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CrepeInventoryApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F07331C6D0E45738A3BC0D738BD6A9C57D46DA53</key>
+		<string>https://github.com/AnitaAnderson/DevelopmentProjects.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CrepeInventory/CrepeInventoryApp.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F07331C6D0E45738A3BC0D738BD6A9C57D46DA53</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/AnitaAnderson/DevelopmentProjects.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F07331C6D0E45738A3BC0D738BD6A9C57D46DA53</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F07331C6D0E45738A3BC0D738BD6A9C57D46DA53</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AnitaFiles</string>
+		</dict>
+	</array>
+</dict>
+</plist>
