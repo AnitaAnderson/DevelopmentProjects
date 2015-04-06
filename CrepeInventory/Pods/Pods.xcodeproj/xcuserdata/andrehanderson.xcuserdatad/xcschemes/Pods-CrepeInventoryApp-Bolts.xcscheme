@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "22437B4E7A5C59561362EF54"
+               BlueprintIdentifier = "F0E12700B19B9228977217EA"
                BuildableName = "Bolts.framework"
                BlueprintName = "Pods-CrepeInventoryApp-Bolts"
                ReferencedContainer = "container:Pods.xcodeproj">

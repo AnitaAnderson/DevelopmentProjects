@@ -8,14 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		11FFA15D66C5A4ABC3E1C19F /* Pods_CrepeInventoryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05441ED282E19451CD4AE503 /* Pods_CrepeInventoryApp.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		37707D081AD1B7CA00C81746 /* DrinksCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37707D071AD1B7CA00C81746 /* DrinksCollectionViewController.m */; };
+		37707D0C1AD1F99D00C81746 /* GenericItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37707D0B1AD1F99D00C81746 /* GenericItemCell.m */; };
+		37C238441AD084DB007EF6DF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C238431AD084DB007EF6DF /* AudioToolbox.framework */; };
+		37C238461AD084F0007EF6DF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C238451AD084F0007EF6DF /* CFNetwork.framework */; };
+		37C238481AD084F7007EF6DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C238471AD084F7007EF6DF /* CoreGraphics.framework */; };
+		37C2384A1AD084FD007EF6DF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C238491AD084FD007EF6DF /* CoreLocation.framework */; };
+		37C2384C1AD08504007EF6DF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C2384B1AD08504007EF6DF /* MobileCoreServices.framework */; };
+		37C2384E1AD0850A007EF6DF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C2384D1AD0850A007EF6DF /* QuartzCore.framework */; };
+		37C238501AD0850F007EF6DF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C2384F1AD0850F007EF6DF /* Security.framework */; };
+		37C238521AD08518007EF6DF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C238511AD08518007EF6DF /* StoreKit.framework */; };
+		37C238541AD0851F007EF6DF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C238531AD0851F007EF6DF /* SystemConfiguration.framework */; };
+		37C238561AD08527007EF6DF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C238551AD08527007EF6DF /* libz.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		37C238581AD0852E007EF6DF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C238571AD0852E007EF6DF /* libsqlite3.dylib */; };
 		37C71A051AD05D16009D3FA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C71A041AD05D16009D3FA7 /* main.m */; };
 		37C71A081AD05D16009D3FA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C71A071AD05D16009D3FA7 /* AppDelegate.m */; };
-		37C71A0B1AD05D16009D3FA7 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C71A0A1AD05D16009D3FA7 /* FirstViewController.m */; };
-		37C71A0E1AD05D16009D3FA7 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C71A0D1AD05D16009D3FA7 /* SecondViewController.m */; };
 		37C71A111AD05D16009D3FA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C71A0F1AD05D16009D3FA7 /* Main.storyboard */; };
 		37C71A131AD05D16009D3FA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C71A121AD05D16009D3FA7 /* Images.xcassets */; };
 		37C71A161AD05D16009D3FA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37C71A141AD05D16009D3FA7 /* LaunchScreen.xib */; };
 		37C71A221AD05D16009D3FA7 /* CrepeInventoryAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C71A211AD05D16009D3FA7 /* CrepeInventoryAppTests.m */; };
+		37F613FA1AD17BBF00062290 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F613F91AD17BBF00062290 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,21 +43,34 @@
 /* Begin PBXFileReference section */
 		05441ED282E19451CD4AE503 /* Pods_CrepeInventoryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrepeInventoryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E60A221DC7956A9A0CE3D11 /* Pods-CrepeInventoryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrepeInventoryApp.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CrepeInventoryApp/Pods-CrepeInventoryApp.release.xcconfig"; sourceTree = "<group>"; };
+		37707D061AD1B7CA00C81746 /* DrinksCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinksCollectionViewController.h; sourceTree = "<group>"; };
+		37707D071AD1B7CA00C81746 /* DrinksCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinksCollectionViewController.m; sourceTree = "<group>"; };
+		37707D0A1AD1F99D00C81746 /* GenericItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericItemCell.h; sourceTree = "<group>"; };
+		37707D0B1AD1F99D00C81746 /* GenericItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericItemCell.m; sourceTree = "<group>"; };
+		37C238431AD084DB007EF6DF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		37C238451AD084F0007EF6DF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		37C238471AD084F7007EF6DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		37C238491AD084FD007EF6DF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		37C2384B1AD08504007EF6DF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		37C2384D1AD0850A007EF6DF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		37C2384F1AD0850F007EF6DF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		37C238511AD08518007EF6DF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		37C238531AD0851F007EF6DF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		37C238551AD08527007EF6DF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		37C238571AD0852E007EF6DF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		37C719FF1AD05D16009D3FA7 /* CrepeInventoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrepeInventoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C71A031AD05D16009D3FA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37C71A041AD05D16009D3FA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37C71A061AD05D16009D3FA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		37C71A071AD05D16009D3FA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		37C71A091AD05D16009D3FA7 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		37C71A0A1AD05D16009D3FA7 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		37C71A0C1AD05D16009D3FA7 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		37C71A0D1AD05D16009D3FA7 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		37C71A101AD05D16009D3FA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37C71A121AD05D16009D3FA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		37C71A151AD05D16009D3FA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		37C71A1B1AD05D16009D3FA7 /* CrepeInventoryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrepeInventoryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C71A201AD05D16009D3FA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37C71A211AD05D16009D3FA7 /* CrepeInventoryAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrepeInventoryAppTests.m; sourceTree = "<group>"; };
+		37F613F81AD17BBF00062290 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		37F613F91AD17BBF00062290 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		88E663FEC03F2C5A06BCBF39 /* Pods-CrepeInventoryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrepeInventoryApp.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-CrepeInventoryApp/Pods-CrepeInventoryApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +79,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C238581AD0852E007EF6DF /* libsqlite3.dylib in Frameworks */,
+				37C238561AD08527007EF6DF /* libz.dylib in Frameworks */,
+				37C238541AD0851F007EF6DF /* SystemConfiguration.framework in Frameworks */,
+				37C238521AD08518007EF6DF /* StoreKit.framework in Frameworks */,
+				37C238501AD0850F007EF6DF /* Security.framework in Frameworks */,
+				37C2384E1AD0850A007EF6DF /* QuartzCore.framework in Frameworks */,
+				37C2384C1AD08504007EF6DF /* MobileCoreServices.framework in Frameworks */,
+				37C2384A1AD084FD007EF6DF /* CoreLocation.framework in Frameworks */,
+				37C238481AD084F7007EF6DF /* CoreGraphics.framework in Frameworks */,
+				37C238461AD084F0007EF6DF /* CFNetwork.framework in Frameworks */,
+				37C238441AD084DB007EF6DF /* AudioToolbox.framework in Frameworks */,
 				11FFA15D66C5A4ABC3E1C19F /* Pods_CrepeInventoryApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37707D091AD1F90D00C81746 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37707D0A1AD1F99D00C81746 /* GenericItemCell.h */,
+				37707D0B1AD1F99D00C81746 /* GenericItemCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		37C719F61AD05D15009D3FA7 = {
 			isa = PBXGroup;
 			children = (
@@ -91,12 +136,10 @@
 		37C71A011AD05D16009D3FA7 /* CrepeInventoryApp */ = {
 			isa = PBXGroup;
 			children = (
+				37707D091AD1F90D00C81746 /* View */,
+				37F613F71AD17B9300062290 /* Controller */,
 				37C71A061AD05D16009D3FA7 /* AppDelegate.h */,
 				37C71A071AD05D16009D3FA7 /* AppDelegate.m */,
-				37C71A091AD05D16009D3FA7 /* FirstViewController.h */,
-				37C71A0A1AD05D16009D3FA7 /* FirstViewController.m */,
-				37C71A0C1AD05D16009D3FA7 /* SecondViewController.h */,
-				37C71A0D1AD05D16009D3FA7 /* SecondViewController.m */,
 				37C71A0F1AD05D16009D3FA7 /* Main.storyboard */,
 				37C71A121AD05D16009D3FA7 /* Images.xcassets */,
 				37C71A141AD05D16009D3FA7 /* LaunchScreen.xib */,
@@ -131,6 +174,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		37F613F71AD17B9300062290 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37F613F81AD17BBF00062290 /* LoginViewController.h */,
+				37F613F91AD17BBF00062290 /* LoginViewController.m */,
+				37707D061AD1B7CA00C81746 /* DrinksCollectionViewController.h */,
+				37707D071AD1B7CA00C81746 /* DrinksCollectionViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		CF92F965E6C5200AB9860391 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +197,17 @@
 		FE492746B7BAFAFC0A30C5E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				37C238571AD0852E007EF6DF /* libsqlite3.dylib */,
+				37C238551AD08527007EF6DF /* libz.dylib */,
+				37C238531AD0851F007EF6DF /* SystemConfiguration.framework */,
+				37C238511AD08518007EF6DF /* StoreKit.framework */,
+				37C2384F1AD0850F007EF6DF /* Security.framework */,
+				37C2384D1AD0850A007EF6DF /* QuartzCore.framework */,
+				37C2384B1AD08504007EF6DF /* MobileCoreServices.framework */,
+				37C238491AD084FD007EF6DF /* CoreLocation.framework */,
+				37C238471AD084F7007EF6DF /* CoreGraphics.framework */,
+				37C238451AD084F0007EF6DF /* CFNetwork.framework */,
+				37C238431AD084DB007EF6DF /* AudioToolbox.framework */,
 				05441ED282E19451CD4AE503 /* Pods_CrepeInventoryApp.framework */,
 			);
 			name = Frameworks;
@@ -299,10 +364,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37C71A0E1AD05D16009D3FA7 /* SecondViewController.m in Sources */,
+				37707D0C1AD1F99D00C81746 /* GenericItemCell.m in Sources */,
 				37C71A081AD05D16009D3FA7 /* AppDelegate.m in Sources */,
-				37C71A0B1AD05D16009D3FA7 /* FirstViewController.m in Sources */,
 				37C71A051AD05D16009D3FA7 /* main.m in Sources */,
+				37707D081AD1B7CA00C81746 /* DrinksCollectionViewController.m in Sources */,
+				37F613FA1AD17BBF00062290 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
