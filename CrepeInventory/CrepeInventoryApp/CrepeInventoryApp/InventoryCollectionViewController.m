@@ -6,16 +6,16 @@
 //  Copyright (c) 2015 yoBLOB. All rights reserved.
 //
 
-#import "DrinksCollectionViewController.h"
+#import "InventoryCollectionViewController.h"
 #import <Parse/Parse.h>
 
-@interface DrinksCollectionViewController ()
+@interface InventoryCollectionViewController ()
 
 @end
 
-@implementation DrinksCollectionViewController
+@implementation InventoryCollectionViewController
 
-@synthesize drinksCollectionView;
+@synthesize inventoryCollectionView;
 static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
@@ -44,7 +44,7 @@ static NSString * const reuseIdentifier = @"Cell";
             NSLog(@"getDrinkList 3 ");
 
             drinksArray = [[NSMutableArray alloc]initWithArray:objects];
-            [drinksCollectionView reloadData];
+            [inventoryCollectionView reloadData];
             NSLog(@"getDrinkList 4 ");
 
         }

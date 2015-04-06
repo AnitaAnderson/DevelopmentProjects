@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "GenericItemCell.h"
 
-@interface DrinksCollectionViewController : UIViewController{
+@interface InventoryCollectionViewController : UIViewController{
     NSMutableArray *drinksArray;
 }
-@property (weak, nonatomic) IBOutlet UICollectionView *drinksCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *inventoryCollectionView;
 
 @end

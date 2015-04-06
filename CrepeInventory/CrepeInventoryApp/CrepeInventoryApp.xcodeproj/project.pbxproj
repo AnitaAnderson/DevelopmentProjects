@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11FFA15D66C5A4ABC3E1C19F /* Pods_CrepeInventoryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05441ED282E19451CD4AE503 /* Pods_CrepeInventoryApp.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		37707D081AD1B7CA00C81746 /* DrinksCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37707D071AD1B7CA00C81746 /* DrinksCollectionViewController.m */; };
+		37707D081AD1B7CA00C81746 /* InventoryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37707D071AD1B7CA00C81746 /* InventoryCollectionViewController.m */; };
 		37707D0C1AD1F99D00C81746 /* GenericItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37707D0B1AD1F99D00C81746 /* GenericItemCell.m */; };
 		37C238441AD084DB007EF6DF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C238431AD084DB007EF6DF /* AudioToolbox.framework */; };
 		37C238461AD084F0007EF6DF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C238451AD084F0007EF6DF /* CFNetwork.framework */; };
@@ -43,8 +43,8 @@
 /* Begin PBXFileReference section */
 		05441ED282E19451CD4AE503 /* Pods_CrepeInventoryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrepeInventoryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E60A221DC7956A9A0CE3D11 /* Pods-CrepeInventoryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrepeInventoryApp.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CrepeInventoryApp/Pods-CrepeInventoryApp.release.xcconfig"; sourceTree = "<group>"; };
-		37707D061AD1B7CA00C81746 /* DrinksCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinksCollectionViewController.h; sourceTree = "<group>"; };
-		37707D071AD1B7CA00C81746 /* DrinksCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinksCollectionViewController.m; sourceTree = "<group>"; };
+		37707D061AD1B7CA00C81746 /* InventoryCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryCollectionViewController.h; sourceTree = "<group>"; };
+		37707D071AD1B7CA00C81746 /* InventoryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryCollectionViewController.m; sourceTree = "<group>"; };
 		37707D0A1AD1F99D00C81746 /* GenericItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericItemCell.h; sourceTree = "<group>"; };
 		37707D0B1AD1F99D00C81746 /* GenericItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericItemCell.m; sourceTree = "<group>"; };
 		37C238431AD084DB007EF6DF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -179,8 +179,8 @@
 			children = (
 				37F613F81AD17BBF00062290 /* LoginViewController.h */,
 				37F613F91AD17BBF00062290 /* LoginViewController.m */,
-				37707D061AD1B7CA00C81746 /* DrinksCollectionViewController.h */,
-				37707D071AD1B7CA00C81746 /* DrinksCollectionViewController.m */,
+				37707D061AD1B7CA00C81746 /* InventoryCollectionViewController.h */,
+				37707D071AD1B7CA00C81746 /* InventoryCollectionViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -367,7 +367,7 @@
 				37707D0C1AD1F99D00C81746 /* GenericItemCell.m in Sources */,
 				37C71A081AD05D16009D3FA7 /* AppDelegate.m in Sources */,
 				37C71A051AD05D16009D3FA7 /* main.m in Sources */,
-				37707D081AD1B7CA00C81746 /* DrinksCollectionViewController.m in Sources */,
+				37707D081AD1B7CA00C81746 /* InventoryCollectionViewController.m in Sources */,
 				37F613FA1AD17BBF00062290 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
