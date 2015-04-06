@@ -15,7 +15,7 @@
 
 @implementation InventoryCollectionViewController
 
-@synthesize inventoryCollectionView;
+@synthesize inventoryCollectionView, inventoryArray;
 static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
@@ -28,25 +28,56 @@ static NSString * const reuseIdentifier = @"Cell";
 //    [self.drinksCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
 //    
     // Do any additional setup after loading the view.
-    NSLog(@"get drinks list");
+    
+    dispatch_queue_t globalConcurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    inventoryArray = [[NSMutableArray alloc]initWithCapacity:3];
+    NSLog(@"parse: retrieving data");
     [self getDrinkList];
+    [self getProductsList];
+    [self getSuppliesList];
+    NSLog(@"parse: finished retrieving data");
+
+//    [inventoryCollectionView reloadData];
 }
 
 #pragma mark - Parse methods
 -(void)getDrinkList{
-    NSLog(@"getDrinkList 1 ");
     PFQuery *query = [PFQuery queryWithClassName:@"Drinks"];
-    
-    NSLog(@"getDrinkList 2 ");
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error){
+            NSLog(@"parse: drinks data");
+
+            NSMutableArray *drinksArray = [[NSMutableArray alloc]initWithArray:objects];
+            [self.inventoryArray addObject:drinksArray];
+            [inventoryCollectionView reloadData];
+        }
+    }];
+}
+
+
+-(void)getProductsList{
+    PFQuery *query = [PFQuery queryWithClassName:@"Products"];
 
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
-            NSLog(@"getDrinkList 3 ");
+            NSLog(@"parse: Products data");
 
-            drinksArray = [[NSMutableArray alloc]initWithArray:objects];
+            NSMutableArray *productsArray  = [[NSMutableArray alloc]initWithArray:objects];
+            [inventoryArray addObject:productsArray];
             [inventoryCollectionView reloadData];
-            NSLog(@"getDrinkList 4 ");
+        }
+    }];
+}
 
+-(void)getSuppliesList{
+    PFQuery *query = [PFQuery queryWithClassName:@"Supplies"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error){
+            NSLog(@"parse: Supplies data");
+
+            NSMutableArray *suppliesArray  = [[NSMutableArray alloc]initWithArray:objects];
+            [inventoryArray addObject:suppliesArray];
+            [inventoryCollectionView reloadData];
         }
     }];
 }
@@ -69,14 +100,16 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete method implementation -- Return the number of sections
+    if(inventoryArray)
+        return [inventoryArray count];
     return 1;
+
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete method implementation -- Return the number of items in the section
-    return [drinksArray count];
+    NSArray *individualArray = [inventoryArray objectAtIndex:section];
+    return [individualArray count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -84,8 +117,9 @@ static NSString * const reuseIdentifier = @"Cell";
     static NSString *cellIdentifier = @"genericItemCell";
     GenericItemCell *genericItemCell = (GenericItemCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
 
-    PFObject *drinkItem = [drinksArray objectAtIndex:indexPath.row];
-    genericItemCell.genericNameLabel.text = [drinkItem objectForKey:@"name"];
+    NSArray *individualArray = [inventoryArray objectAtIndex:indexPath.section];
+    PFObject *inventoryItem = [individualArray objectAtIndex:indexPath.row];
+    genericItemCell.genericNameLabel.text = [inventoryItem objectForKey:@"name"];
     return genericItemCell;
 }
 

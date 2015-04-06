@@ -10,8 +10,9 @@
 #import "GenericItemCell.h"
 
 @interface InventoryCollectionViewController : UIViewController{
-    NSMutableArray *drinksArray;
+//    NSMutableArray *inventoryArray;
 }
 @property (weak, nonatomic) IBOutlet UICollectionView *inventoryCollectionView;
+@property (strong, nonatomic) IBOutlet NSMutableArray *inventoryArray;
 
 @end
