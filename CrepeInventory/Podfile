@@ -5,6 +5,7 @@ xcodeproj 'CrepeInventoryApp/CrepeInventoryApp.xcodeproj/'
 
 target 'CrepeInventoryApp' do
   pod 'Parse', '~> 1.3'
+#  pod 'ParseUI', '~>1.1.3'
  # pod 'AFNetworking', '~> 2.5'
  # pod 'ORStackView', '~> 2.0'
  # pod 'SwiftyJSON', '~> 2.1'
