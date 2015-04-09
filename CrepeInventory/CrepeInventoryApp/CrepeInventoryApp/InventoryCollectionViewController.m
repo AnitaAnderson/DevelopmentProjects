@@ -16,7 +16,7 @@
 
 @implementation InventoryCollectionViewController
 
-@synthesize inventoryCollectionView, inventoryDict, inventoryOrderDict;
+@synthesize inventoryCollectionView, inventoryDict, inventoryOrderDict, updatedInventoryOrderDict;
 static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
@@ -27,7 +27,8 @@ static NSString * const reuseIdentifier = @"Cell";
     
     inventoryDict = [[NSMutableDictionary alloc]initWithCapacity:3];
     inventoryOrderDict = [[NSMutableDictionary alloc]initWithCapacity:3];
-
+    updatedInventoryOrderDict = [[NSMutableDictionary alloc]init];
+    
     NSLog(@"parse: retrieving data");
     [self getDrinkList];
     [self getProductsList];
@@ -50,7 +51,9 @@ static NSString * const reuseIdentifier = @"Cell";
     PFObject *shiftInventory = [PFObject objectWithClassName:@"ShiftInventory"];
     shiftInventory[@"amPM"]= @"am";
     shiftInventory[@"shiftDate"]=[NSDate date];
-    shiftInventory[@"inventoryItems"]= inventoryOrderDict.allValues;
+//    shiftInventory[@"processed"]=false;
+
+    shiftInventory[@"inventoryItems"]= updatedInventoryOrderDict;
     [shiftInventory saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(succeeded){
             NSLog(@"success");
@@ -197,17 +200,6 @@ static NSString * const reuseIdentifier = @"Cell";
         InventoryHeaderReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"HeaderView"forIndexPath:indexPath];
         NSArray *keys = [inventoryDict allKeys];
         NSString *headerTitle = keys[indexPath.section];
-//        NSString *headerTitle;
-//        if (indexPath.section == 0) {
-//            headerTitle = @"Products";
-//        }
-//        else if (indexPath.section == 1) {
-//            headerTitle = @"Supplies";
-//        }
-//        else if (indexPath.section == 2) {
-//            headerTitle = @"Drinks";
-//        }
-//
         headerView.headerLabel.text = headerTitle;
         reusableView = headerView;
         
@@ -221,9 +213,9 @@ static NSString * const reuseIdentifier = @"Cell";
 -(BOOL)textFieldShouldEndEditing:(UITextField *)textField
 {
     PFObject *updatedInventoryItem = [inventoryOrderDict objectForKey:[NSString stringWithFormat:@"%ld", (long)textField.tag]];
-    [updatedInventoryItem setValue:textField.text forKey:@"updatedQty"];
+    NSString *objectID = updatedInventoryItem.objectId; //[updatedInventoryItem objectForKey:@"objectId" ];
+    [updatedInventoryOrderDict setValue:textField.text forKey:objectID];
     
-
     return YES;
 }
 @end

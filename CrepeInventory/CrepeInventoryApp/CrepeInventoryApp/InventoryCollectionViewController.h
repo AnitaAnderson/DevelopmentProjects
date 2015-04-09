@@ -14,6 +14,6 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *inventoryCollectionView;
 @property (strong, nonatomic) IBOutlet NSMutableDictionary *inventoryDict;
 @property (strong, nonatomic) IBOutlet NSMutableDictionary *inventoryOrderDict;
-
+@property (strong, nonatomic) NSMutableDictionary *updatedInventoryOrderDict;
 - (IBAction)saveInventoryReport:(id)sender;
 @end
