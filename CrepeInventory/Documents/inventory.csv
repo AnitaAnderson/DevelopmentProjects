@@ -1,44 +1,39 @@
-name,type,baselineQty
-Coca,Drink,10
-Coca Zero,Drink,10
-Guaraná Antarctica,Drink,10
-Schwepps Citrus,Drink,10
-Suco de Uva,Drink,10
-Suco de Pêssego,Drink,10
-Suco de Maracuja,Drink,10
-Embalagem Para Viagem,Supply,10
-Canudos,Supply,10
-Cartões,Supply,10
-Cones,Supply,10
-Copos descartáveis,Supply,10
-Guardanapos,Supply,10
-Luvas descartáveis,Supply,10
-Mat. Limpeza Bucha,Supply,10
-Mat. Limpeza Detergente,Supply,10
-Mat. Limpeza Multiuso,Supply,10
-Mat. Limpeza Perfex,Supply,10
-Alcool a 70%,Supply,10
-Massas,Ingridient,10
-Carne,Ingridient,10
-Frango,Ingridient,10
-Presunto,Ingridient,10
-Linguicinha,Ingridient,10
-Peito de Peru,Ingridient,10
-Banana,Ingridient,10
-Morango,Ingridient,10
-Chocolate,Ingridient,10
-Azeitona,Ingridient,10
-Batata Palha,Ingridient,10
-Catupiry,Ingridient,10
-Cebola,Ingridient,10
-Milho,Ingridient,10
-Mussarela,Ingridient,10
-Orégano,Ingridient,10
-Tomate,Ingridient,10
-Doce de leite,Ingridient,10
-Leite condensado,Ingridient,10
-Canela e açucar,Ingridient,10
-Molho Barbecue,Ingridient,10
-Molho Mostarda com Mel,Ingridient,10
-Molho Pasta de Alho,Ingridient,10
-Molho 4 Pimentas,Ingridient,10
+name,type,baselineQty,range,notes
+Coca,Drink,20,10,cans
+Coca Zero,Drink,20,10,cans
+Guarana Antarctica,Drink,15,5,cans
+Schwepps Citrus,Drink,10,5,cans
+Suco de Uva,Drink,10,5,cans
+Suco de Pessego,Drink,10,5,cans
+Suco de Maracuja,Drink,10,5,
+Embalagem Para Viagem,Supply,20,10,
+Canudos,Supply,4,2,packages
+Cones,Supply,100,50,
+Copos descartaveis,Supply,2,1,packages
+Guardanapos,Supply,4,2,packages
+Luvas descartaveis,Supply,4,2,packages
+Mat. Limpeza Bucha,Supply,2,1,packages
+Mat. Limpeza Detergente,Supply,2,1,packages
+Mat. Limpeza Multiuso,Supply,2,1,packages
+Mat. Limpeza Perfex,Supply,2,1,packages
+Alcool a 70%,Supply,2,1,packages
+Massas,Ingridient,50,25,
+Carne,Ingridient,2,1,killogram
+Frango,Ingridient,2,1,killogram
+Linguicinha,Ingridient,2,1,killogram
+Peito de Peru,Ingridient,2,1,cubes
+Banana,Ingridient,10,5,individual
+Chocolate,Ingridient,2,1,by bag
+Azeitona,Ingridient,2,1,by bag
+Catupiry,Ingridient,2,1,by bag
+Cebola,Ingridient,6,3,
+Mussarela,Ingridient,2,1,
+Orégano,Ingridient,2,1,
+Tomate,Ingridient,8,4,
+Doce de leite,Ingridient,2,1,
+Leite condensado,Ingridient,2,1,
+Canela e acucar,Ingridient,2,1,
+Molho Barbecue,Ingridient,2,1,
+Molho Mostarda com Mel,Ingridient,2,1,
+Molho Pasta de Alho,Ingridient,2,1,
+Molho 4 Pimentas,Ingridient,2,1,

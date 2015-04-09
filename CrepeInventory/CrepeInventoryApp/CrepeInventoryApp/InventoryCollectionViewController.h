@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "GenericItemCell.h"
 
-@interface InventoryCollectionViewController : UIViewController{
-//    NSMutableArray *inventoryArray;
-}
-@property (weak, nonatomic) IBOutlet UICollectionView *inventoryCollectionView;
-@property (strong, nonatomic) IBOutlet NSMutableArray *inventoryArray;
+@interface InventoryCollectionViewController : UIViewController<UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UICollectionView *inventoryCollectionView;
+@property (strong, nonatomic) IBOutlet NSMutableDictionary *inventoryDict;
+@property (strong, nonatomic) IBOutlet NSMutableDictionary *inventoryOrderDict;
+
+- (IBAction)saveInventoryReport:(id)sender;
 @end

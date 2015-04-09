@@ -8,6 +8,7 @@
 
 #import "InventoryCollectionViewController.h"
 #import <Parse/Parse.h>
+#import "InventoryHeaderReusableView.h"
 
 @interface InventoryCollectionViewController ()
 
@@ -15,7 +16,7 @@
 
 @implementation InventoryCollectionViewController
 
-@synthesize inventoryCollectionView, inventoryArray;
+@synthesize inventoryCollectionView, inventoryDict, inventoryOrderDict;
 static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
@@ -24,31 +25,53 @@ static NSString * const reuseIdentifier = @"Cell";
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
-//    // Register cell classes
-//    [self.drinksCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-//    
-    // Do any additional setup after loading the view.
-    
-    dispatch_queue_t globalConcurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    inventoryArray = [[NSMutableArray alloc]initWithCapacity:3];
+    inventoryDict = [[NSMutableDictionary alloc]initWithCapacity:3];
+    inventoryOrderDict = [[NSMutableDictionary alloc]initWithCapacity:3];
+
     NSLog(@"parse: retrieving data");
     [self getDrinkList];
     [self getProductsList];
     [self getSuppliesList];
     NSLog(@"parse: finished retrieving data");
-
+    @try {
+        UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*)inventoryCollectionView.collectionViewLayout;
+        collectionViewLayout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
+    }
+    @catch (NSException *exception) {
+        NSLog(exception);
+    }
+   
+    
 //    [inventoryCollectionView reloadData];
+}
+
+#pragma mark - actions
+- (IBAction)saveInventoryReport:(id)sender {
+    PFObject *shiftInventory = [PFObject objectWithClassName:@"ShiftInventory"];
+    shiftInventory[@"amPM"]= @"am";
+    shiftInventory[@"shiftDate"]=[NSDate date];
+    shiftInventory[@"inventoryItems"]= inventoryOrderDict.allValues;
+    [shiftInventory saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(succeeded){
+            NSLog(@"success");
+        }
+        else{
+            NSLog(@"fail");
+        }
+    }];
+    
 }
 
 #pragma mark - Parse methods
 -(void)getDrinkList{
-    PFQuery *query = [PFQuery queryWithClassName:@"Drinks"];
+    PFQuery *query = [PFQuery queryWithClassName:@"InventoryItems"];
+    [query whereKey:@"type" equalTo:@"Drink"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
             NSLog(@"parse: drinks data");
 
             NSMutableArray *drinksArray = [[NSMutableArray alloc]initWithArray:objects];
-            [self.inventoryArray addObject:drinksArray];
+            [inventoryDict setObject:drinksArray forKey:@"Drinks"];
             [inventoryCollectionView reloadData];
         }
     }];
@@ -56,31 +79,33 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 -(void)getProductsList{
-    PFQuery *query = [PFQuery queryWithClassName:@"Products"];
-
+    PFQuery *query = [PFQuery queryWithClassName:@"InventoryItems"];
+    [query whereKey:@"type" equalTo:@"Ingridient"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
             NSLog(@"parse: Products data");
 
             NSMutableArray *productsArray  = [[NSMutableArray alloc]initWithArray:objects];
-            [inventoryArray addObject:productsArray];
+            [inventoryDict setObject:productsArray forKey:@"Products"];
             [inventoryCollectionView reloadData];
         }
     }];
 }
 
 -(void)getSuppliesList{
-    PFQuery *query = [PFQuery queryWithClassName:@"Supplies"];
+    PFQuery *query = [PFQuery queryWithClassName:@"InventoryItems"];
+    [query whereKey:@"type" equalTo:@"Supply"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
             NSLog(@"parse: Supplies data");
-
             NSMutableArray *suppliesArray  = [[NSMutableArray alloc]initWithArray:objects];
-            [inventoryArray addObject:suppliesArray];
+            [inventoryDict setObject:suppliesArray forKey:@"Supplies"];
             [inventoryCollectionView reloadData];
         }
     }];
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -100,15 +125,16 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    if(inventoryArray)
-        return [inventoryArray count];
+    if(inventoryDict)
+        return [[inventoryDict allKeys] count];
     return 1;
 
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    NSArray *individualArray = [inventoryArray objectAtIndex:section];
+    NSArray *keys = [inventoryDict allKeys];
+    NSArray *individualArray = [inventoryDict objectForKey:[keys objectAtIndex:section]];
     return [individualArray count];
 }
 
@@ -117,42 +143,87 @@ static NSString * const reuseIdentifier = @"Cell";
     static NSString *cellIdentifier = @"genericItemCell";
     GenericItemCell *genericItemCell = (GenericItemCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
 
-    NSArray *individualArray = [inventoryArray objectAtIndex:indexPath.section];
+    NSArray *keys = [inventoryDict allKeys];
+    NSArray *individualArray = [inventoryDict objectForKey:[keys objectAtIndex:indexPath.section]];
+
     PFObject *inventoryItem = [individualArray objectAtIndex:indexPath.row];
     genericItemCell.genericNameLabel.text = [inventoryItem objectForKey:@"name"];
-    return genericItemCell;
+    genericItemCell.genericQtyField.text = @"";
+    genericItemCell.genericQtyField.delegate = self;
+
+    //updating tag of textfield to section(+1)row so we can update array object
+    {
+        //need to add 1 to section, since section starts with 0 and int value does not show leading 0
+        NSString *str = [NSString stringWithFormat:@"%li%li", ((long)indexPath.section + 1), (long)indexPath.row];
+        NSInteger aValue = [[str stringByReplacingOccurrencesOfString:@" " withString:@""] integerValue];
+        
+        genericItemCell.genericQtyField.tag=aValue;
+        
+        [inventoryOrderDict setValue:inventoryItem forKey:str];
+    }
+        return genericItemCell;
 }
 
 
 #pragma mark <UICollectionViewDelegate>
 
-/*
+
 // Uncomment this method to specify if the specified item should be highlighted during tracking
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
 	return YES;
 }
-*/
 
-/*
 // Uncomment this method to specify if the specified item should be selected
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
-*/
 
-/*
 // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
+	return YES;
 }
 
 - (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
+	return YES;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
 }
-*/
 
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    UICollectionReusableView *reusableView = nil;
+    
+    if(kind == UICollectionElementKindSectionHeader){
+        InventoryHeaderReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"HeaderView"forIndexPath:indexPath];
+        NSArray *keys = [inventoryDict allKeys];
+        NSString *headerTitle = keys[indexPath.section];
+//        NSString *headerTitle;
+//        if (indexPath.section == 0) {
+//            headerTitle = @"Products";
+//        }
+//        else if (indexPath.section == 1) {
+//            headerTitle = @"Supplies";
+//        }
+//        else if (indexPath.section == 2) {
+//            headerTitle = @"Drinks";
+//        }
+//
+        headerView.headerLabel.text = headerTitle;
+        reusableView = headerView;
+        
+    }
+    
+    return reusableView;
+    
+}
+
+
+-(BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    PFObject *updatedInventoryItem = [inventoryOrderDict objectForKey:[NSString stringWithFormat:@"%ld", (long)textField.tag]];
+    [updatedInventoryItem setValue:textField.text forKey:@"updatedQty"];
+    
+
+    return YES;
+}
 @end
